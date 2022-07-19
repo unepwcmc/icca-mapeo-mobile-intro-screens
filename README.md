@@ -1,4 +1,4 @@
-# @digidem/wcmc-mapeo-mobile-intro
+# clone of @digidem/wcmc-mapeo-mobile-intro - new working config
 
 Intro screens for Mapeo Mobile for the WCMC ICCA registration app.
 
