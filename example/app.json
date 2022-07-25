@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "WCMC Mapeo Mobile Intro Screens",
-    "slug": "wcmc-mapeo-mobile-intro",
+    "slug": "icca-mapeo-mobile-intro-screens",
     "privacy": "public",
     "platforms": [
       "ios",
@@ -25,6 +25,6 @@
       "supportsTablet": true
     },
     "description": "These are the Intro screens for 'Mapeo for ICCAs', an app being developed for the WCMC. This is not the complete app, only the Intro screens for review.",
-    "githubUrl": "https://github.com/digidem/wcmc-mapeo-mobile-intro"
+    "githubUrl": "https://github.com/unep-wcmc/icca-mapeo-mobile-intro-screens"
   }
 }

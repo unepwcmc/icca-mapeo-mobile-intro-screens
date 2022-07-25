@@ -1,6 +1,6 @@
 {
-  "name": "@digidem/wcmc-mapeo-mobile-intro",
-  "version": "1.1.0",
+  "name": "@unep-wcmc/icca-mapeo-mobile-intro-screens",
+  "version": "1.0.0",
   "description": "Intro screens for Mapeo Mobile for the WCMC ICCA registration app",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
@@ -24,13 +24,13 @@
     "mapeo",
     "wcmc"
   ],
-  "repository": "https://github.com/digidem/wcmc-mapeo-mobile-intro",
+  "repository": "https://github.com/unep-wcmc/icca-mapeo-mobile-intro-screens",
   "author": "Digital Democracy <gmaclennan@digital-democracy.org> (https://www.digital-democracy.org)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/digidem/wcmc-mapeo-mobile-intro/issues"
+    "url": "https://github.com/unep-wcmc/icca-mapeo-mobile-intro-screens/issues"
   },
-  "homepage": "https://github.com/digidem/wcmc-mapeo-mobile-intro#readme",
+  "homepage": "https://github.com/unep-wcmc/icca-mapeo-mobile-intro-screens#readme",
   "devDependencies": {
     "@commitlint/config-conventional": "^8.3.4",
     "@react-native-community/bob": "^0.17.1",
@@ -91,5 +91,8 @@
     "react-native-tab-view": "^2.13.0",
     "react-navigation-hooks": "^1.1.0",
     "remark": "^11.0.2"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@unep-wcmc"
   }
 }
