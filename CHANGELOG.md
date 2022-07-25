@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.1.0 (2022-07-25)
+
+
+### Features
+
+* rename the package ([acdb31a](https://github.com/unep-wcmc/icca-mapeo-mobile-intro-screens/commit/acdb31ad65f44e747e4d30f9125d26fee28d2b10))
+
 ## [1.1.0](https://github.com/digidem/wcmc-mapeo-mobile-intro/compare/v1.0.3...v1.1.0) (2021-08-20)
 
 
