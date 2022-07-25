@@ -91,5 +91,8 @@
     "react-native-tab-view": "^2.13.0",
     "react-navigation-hooks": "^1.1.0",
     "remark": "^11.0.2"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@unep-wcmc"
   }
 }
