@@ -1,5 +1,5 @@
 {
-  "name": "@digidem/wcmc-mapeo-mobile-intro-example",
+  "name": "@unep-wcmc/icca-mapeo-mobile-intro-screens-example",
   "version": "0.0.1",
   "main": "node_modules/expo/AppEntry.js",
   "private": true,
@@ -10,6 +10,7 @@
     "web": "expo start:web"
   },
   "dependencies": {
+    "@digidem/wcmc-mapeo-mobile-intro": "^0.0.1",
     "@expo/vector-icons": "^12.0.0",
     "expo": "^40.0.0",
     "expo-linear-gradient": "~8.4.0",

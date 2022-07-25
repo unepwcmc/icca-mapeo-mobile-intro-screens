@@ -5,7 +5,7 @@ module.exports = {
       'module-resolver',
       {
         alias: {
-          '@digidem/wcmc-mapeo-mobile-intro': '../src/index',
+          '@unep-wcmc/icca-mapeo-mobile-intro-screens': '../src/index',
           'react-native-vector-icons': '@expo/vector-icons',
         },
       },

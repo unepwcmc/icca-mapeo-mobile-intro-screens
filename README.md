@@ -1,4 +1,4 @@
-# clone of @digidem/wcmc-mapeo-mobile-intro - new working config
+# @wcmc/icca-mapeo-mobile-intro-screens clone of @digidem/wcmc-mapeo-mobile-intro - new working config
 
 Intro screens for Mapeo Mobile for the WCMC ICCA registration app.
 
@@ -25,7 +25,7 @@ Open the command line tool on your computer, this will be "Terminal" on a Mac or
 Change the folder to the folder you just cloned to:
 
 ```sh
-cd WCMC_INTRO_CLONED_FOLDER
+cd icca-mapeo-mobile-intro-screens
 ```
 
 Install all the dependencies
@@ -109,7 +109,7 @@ When you're sending a pull request:
 ## Installation
 
 ```sh
-npm install @digidem/wcmc-mapeo-mobile-intro
+npm install @wcmc/icca-mapeo-mobile-intro-screens
 ```
 
 ## Usage
@@ -119,7 +119,7 @@ Works best with a navigation library - see the [Example](./example)
 ```js
 import React from 'react'
 import { Text, Button } from 'react'
-import { IntroPager, IntroInfo } from '@digidem/wcmc-mapeo-mobile-intro'
+import { IntroPager, IntroInfo } from '@unep-wcmc/icca-mapeo-mobile-intro-screens'
 
 // ...
 

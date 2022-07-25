@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@digidem/wcmc-mapeo-mobile-intro": ["./src/index"]
+      "unep-wcmc/icca-mapeo-mobile-intro-screens": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
