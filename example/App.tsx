@@ -6,7 +6,7 @@ import {
 } from 'react-navigation'
 import { Alert } from 'react-native'
 
-import { IntroPager, IntroInfo } from '../../icca-mapeo-mobile-intro-screens'
+import { IntroPager, IntroInfo } from '@digidem/wcmc-mapeo-mobile-intro'
 
 import { HeaderTitle } from 'react-navigation-stack'
 import { StatusBar } from 'react-native'
