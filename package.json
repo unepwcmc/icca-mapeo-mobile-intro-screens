@@ -1,6 +1,6 @@
 {
   "name": "@unep-wcmc/icca-mapeo-mobile-intro-screens",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Intro screens for Mapeo Mobile for the WCMC ICCA registration app",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
@@ -16,7 +16,6 @@
     "test": "jest",
     "typescript": "tsc --noEmit",
     "lint": "eslint --ext .js,.ts,.tsx .",
-    "prepare": "bob build",
     "example": "yarn --cwd example",
     "bootstrap": "yarn example && yarn"
   },
@@ -93,6 +92,6 @@
     "remark": "^11.0.2"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@unep-wcmc"
+    "registry": "https://registry.npmjs.org"
   }
 }
