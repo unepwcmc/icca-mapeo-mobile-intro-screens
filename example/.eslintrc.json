@@ -3,7 +3,7 @@
 
   "settings": {
     "import/core-modules": [
-      "@digidem/wcmc-mapeo-mobile-intro",
+      "@unep-wcmc/icca-mapeo-mobile-intro-screens-example",
       "react-native-gesture-handler",
       "react-native-reanimated"
     ]
