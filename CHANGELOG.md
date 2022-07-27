@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/unep-wcmc/icca-mapeo-mobile-intro-screens/compare/v1.1.0...v1.2.0) (2022-07-27)
+
+
+### Bug Fixes
+
+* change back to the  original package ([7aab065](https://github.com/unep-wcmc/icca-mapeo-mobile-intro-screens/commit/7aab06570d760141cc1ebcb66e55949f336c76d5))
+* point example to published package ([7387a28](https://github.com/unep-wcmc/icca-mapeo-mobile-intro-screens/commit/7387a286da2be9f073e0349f766e139ea02e2183))
+
 ### [1.1.1](https://github.com/unep-wcmc/icca-mapeo-mobile-intro-screens/compare/v1.1.0...v1.1.1) (2022-07-26)
 
 
