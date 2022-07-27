@@ -1246,20 +1246,6 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@digidem/wcmc-mapeo-mobile-intro@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.npmjs.org/@digidem/wcmc-mapeo-mobile-intro/-/wcmc-mapeo-mobile-intro-1.1.0.tgz#a0a6263f6bb457f9fa841a23368e82f442c4a572"
-  integrity sha512-tXfVZj1rQe5LbukFXyCrCpxgvxScypYjfJ06Uf0U3C1J7PBTCmnzZ3WBRVaXbJuwKFVyHs9Fw51plV0hFKip2g==
-  dependencies:
-    get-contrast-ratio "^0.2.1"
-    mdast-normalize-react-native "^3.2.0"
-    path "^0.12.7"
-    react-markdown "^4.3.1"
-    react-native-redash "^9.6.0"
-    react-native-tab-view "^2.13.0"
-    react-navigation-hooks "^1.1.0"
-    remark "^11.0.2"
-
 "@egjs/hammerjs@^2.0.17":
   version "2.0.17"
   resolved "https://registry.yarnpkg.com/@egjs/hammerjs/-/hammerjs-2.0.17.tgz#5dc02af75a6a06e4c2db0202cae38c9263895124"
@@ -2599,6 +2585,20 @@
   integrity sha512-9T1auFmbPZoxHz0enUFlUuKRy3it01R+hlggyVUMtnCTQRunsQYifnSGb8hET4Xo8yiC0o0r1paW3ud5+rbURg==
   dependencies:
     "@types/yargs-parser" "*"
+
+"@unep-wcmc/icca-mapeo-mobile-intro-screens@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.npmjs.org/@unep-wcmc/icca-mapeo-mobile-intro-screens/-/icca-mapeo-mobile-intro-screens-1.1.1.tgz#1c8a86b06ef593b74406e5f1c007de0609b1c0c1"
+  integrity sha512-DAEdWjc1gXYzHkNCxhuNkwgUf/UpnyPg6SgxqLJiym6P+RVUaGMIXaNOMmxTU/cziwlP29vCdLzFYw4KiczhSg==
+  dependencies:
+    get-contrast-ratio "^0.2.1"
+    mdast-normalize-react-native "^3.2.0"
+    path "^0.12.7"
+    react-markdown "^4.3.1"
+    react-native-redash "^9.6.0"
+    react-native-tab-view "^2.13.0"
+    react-navigation-hooks "^1.1.0"
+    remark "^11.0.2"
 
 "@unimodules/core@~6.0.0":
   version "6.0.0"
