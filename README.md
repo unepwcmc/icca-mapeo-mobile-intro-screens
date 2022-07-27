@@ -1,4 +1,4 @@
-# @wcmc/icca-mapeo-mobile-intro-screens clone of @digidem/wcmc-mapeo-mobile-intro - new working config
+# @unep-wcmc/icca-mapeo-mobile-intro-screens clone of @digidem/wcmc-mapeo-mobile-intro - new working config
 
 Intro screens for Mapeo Mobile for the WCMC ICCA registration app.
 
@@ -109,7 +109,7 @@ When you're sending a pull request:
 ## Installation
 
 ```sh
-npm install @wcmc/icca-mapeo-mobile-intro-screens
+npm install @unep-wcmc/icca-mapeo-mobile-intro-screens
 ```
 
 ## Usage
@@ -151,6 +151,27 @@ const Intro = () => {
   )
 }
 
+```
+
+## Release and Publishing changes
+
+need to be logged in in your cli to the unep-wcmc npm account (credentials available to team members on LastPass)
+
+1. check if the app and /example builds correctly (run yarn in both dir)
+
+2. Release 
+
+- checkout main and merge develop
+- Pick a version type (otherwise you need to bump the version number by using npm version patch|minor|major (these are flags, default is major) - ex `npx standard-version --release-as minor`
+
+Read up on “semver” https://semver.org/ if those terms don’t mean much to you.)
+
+```sh
+npx standard-version
+```
+
+```sh
+git push --follow-tags origin main && npm publish
 ```
 
 ## License
