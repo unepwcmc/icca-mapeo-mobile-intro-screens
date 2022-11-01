@@ -1,0 +1,10 @@
+{
+    "en": {
+        "introScreens.IntroDots.nextPageLabel": "Continue",
+        "introScreens.IntroDots.nextPageHint": "Navigate to the next page"
+    },
+    "de": {
+        "introScreens.IntroDots.nextPageLabel": "DE: Continue",
+        "introScreens.IntroDots.nextPageHint": "DE: Navigate to the next page"
+    }
+}

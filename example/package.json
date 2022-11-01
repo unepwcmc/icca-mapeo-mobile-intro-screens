@@ -10,14 +10,16 @@
     "web": "expo start:web"
   },
   "dependencies": {
-    "@unep-wcmc/icca-mapeo-mobile-intro-screens": "^1.1.1",
     "@expo/vector-icons": "^12.0.0",
+    "@unep-wcmc/icca-mapeo-mobile-intro-screens": "^1.1.1",
     "expo": "^40.0.0",
     "expo-linear-gradient": "~8.4.0",
     "get-contrast-ratio": "^0.2.1",
+    "intl": "^1.2.5",
     "mdast-normalize-react-native": "^3.2.0",
     "path": "^0.12.7",
     "react": "16.13.1",
+    "react-intl": "^6.2.1",
     "react-markdown": "^4.3.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-40.0.1.tar.gz",
     "react-native-gesture-handler": "~1.8.0",

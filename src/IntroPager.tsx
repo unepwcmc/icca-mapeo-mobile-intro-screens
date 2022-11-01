@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { IntlShape, RawIntlProvider } from 'react-intl'
 import { BackHandler, Dimensions, StyleSheet, Platform } from 'react-native'
 import { TabView } from 'react-native-tab-view'
 import IntroScreen, { OnShowInfo } from './IntroScreen'
@@ -14,9 +15,11 @@ const noop = () => null
 const IntroPager = ({
   onPressComplete = noop,
   onShowInfo = noop,
+  intl,
 }: {
   onPressComplete: () => void
   onShowInfo: OnShowInfo
+  intl: IntlShape
 }) => {
   const [index, setIndex] = React.useState(0)
 
@@ -71,25 +74,27 @@ const IntroPager = ({
 
   return (
     // @ts-ignore
-    // eslint-disable-next-line react-native/no-inline-styles
-    <Animated.View style={{ backgroundColor, flex: 1 }}>
-      <TabView
-        navigationState={{ index, routes }}
-        renderScene={renderScene}
-        onIndexChange={setIndex}
-        initialLayout={initialLayout}
-        renderTabBar={noop}
-        position={position}
-        style={styles.overflowVisible}
-        sceneContainerStyle={styles.overflowVisible}
-      />
-      <IntroDots
-        position={position}
-        jumpTo={setIndex}
-        onPressNext={handlePressNext}
-        routes={routes}
-      />
-    </Animated.View>
+    /* eslint-disable react-native/no-inline-styles */
+    <RawIntlProvider value={intl}>
+      <Animated.View style={{ backgroundColor, flex: 1 }}>
+        <TabView
+          navigationState={{ index, routes }}
+          renderScene={renderScene}
+          onIndexChange={setIndex}
+          initialLayout={initialLayout}
+          renderTabBar={noop}
+          position={position}
+          style={styles.overflowVisible}
+          sceneContainerStyle={styles.overflowVisible}
+        />
+        <IntroDots
+          position={position}
+          jumpTo={setIndex}
+          onPressNext={handlePressNext}
+          routes={routes}
+        />
+      </Animated.View>
+    </RawIntlProvider>
   )
 }
 
