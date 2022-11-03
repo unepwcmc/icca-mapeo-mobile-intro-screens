@@ -22,7 +22,7 @@ import { HeaderTitle } from 'react-navigation-stack'
 import { StatusBar } from 'react-native'
 import { useNavigationParam } from 'react-navigation-hooks'
 
-import messages from './translations/messages.json'
+import messages from '../translations/messages.json'
 
 const cache = createIntlCache()
 
