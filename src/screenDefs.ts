@@ -6,7 +6,9 @@ const wcmcScreens: ScreenType[] = [
     title: 'Welcome to Mapeo for ICCAs',
     description:
       'Mapeo for ICCAs was developed specifically to support the mapping of ICCA boundaries and includes the option of submitting the ICCA information to UNEP-WCMC.',
-    image: require('../assets/mapeo-logo-transparent.png'),
+    image: {
+      en: require('../assets/mapeo-logo-transparent.png'),
+    },
     moreLink: 'Who built Mapeo?',
     moreText: `
 Mapeo was developed by Digital Democracy in close collaboration with indigenous
@@ -31,14 +33,18 @@ ICCAs have three key characteristics:
 2. Decisions about how to manage the territory or area are made primarily by the people or community.
 3. The people’s or community’s decisions and efforts lead to the conservation of biodiversity, ecological functions and associated cultural values, regardless of the primary objectives of management.
 `,
-    image: require('../assets/drawkit-nature-man-colour-800px.png'),
+    image: {
+      en: require('../assets/drawkit-nature-man-colour-800px.png'),
+    },
   },
   {
     backgroundColor: '#8ac9d1',
     title: 'Register your ICCA with UNEP-WCMC',
     description:
       'Registering the area you are protecting will show the contribution that indigenous peoples and local communities make to conservation efforts.',
-    image: require('../assets/undraw_connected_world_wuay.png'),
+    image: {
+      en: require('../assets/undraw_connected_world_wuay.png'),
+    },
     moreLink: 'What is UNEP-WCMC and how will they use my data?',
     moreTitle: 'Use of Information',
     moreText: `
@@ -56,28 +62,39 @@ When communities provide information to the ICCA Registry, they help the interna
     title: 'Collecting data',
     description:
       'Head out to your ICCA and press the orange ＋ button to record a GPS point.',
-    image: require('../assets/mapeo-map-screen.png'),
+    image: {
+      en: require('../assets/mapeo-map-screen.png'),
+    },
   },
   {
     backgroundColor: '#45228f',
     title: 'Choose a category',
     description:
       'You can record points along the boundary of your ICCA, or important points inside the area.',
-    image: require('../assets/wcmc-categories-screen.png'),
+    image: {
+      en: require('../assets/en/wcmc-categories-screen.png'),
+      de: require('../assets/de/wcmc-categories-screen.png'),
+    },
   },
   {
     backgroundColor: '#d3a4ed',
     title: 'Add photos and details',
     description:
       'Add a description of the point. You can also add photos and other details. Then save the point, pressing the orange tick.',
-    image: require('../assets/mapeo-new-observation-screen.png'),
+    image: {
+      en: require('../assets/en/mapeo-new-observation-screen.png'),
+      de: require('../assets/de/mapeo-new-observation-screen.png'),
+    },
   },
   {
     backgroundColor: '#f0a5dc',
     title: 'Draw your ICCA with Mapeo Desktop',
     description:
       'Back in your community you can sync your points with Mapeo Desktop to get them onto a laptop, and use them to draw the ICCA boundary.',
-    image: require('../assets/mapeo-sync-screen.png'),
+    image: {
+      en: require('../assets/en/mapeo-sync-screen.png'),
+      de: require('../assets/de/mapeo-sync-screen.png'),
+    },
     moreLink: 'What to do next?',
     moreTitle: 'What to do next?',
     moreText: `
@@ -98,7 +115,9 @@ There are five stages to providing information:
     title: 'Send to UNEP-WCMC',
     description:
       'Once your community has approved the area you can send it to UNEP-WCMC. They will review it and then publish it online.',
-    image: require('../assets/undraw_software_engineer_lvl5.png'),
+    image: {
+      en: require('../assets/undraw_software_engineer_lvl5.png'),
+    },
     moreLink: 'How will UNEP-WCMC use your data?',
     moreTitle: 'Use of your data',
     moreText: `
@@ -112,7 +131,9 @@ After you have provided information using Mapeo, the following steps will be tak
     backgroundColor: '#fc9f14',
     title: 'Enjoy Mapeo!',
     description: 'Tap the tick to start using Mapeo.',
-    image: require('../assets/undraw_High_five_u364.png'),
+    image: {
+      en: require('../assets/undraw_High_five_u364.png'),
+    },
     moreLink: 'More help',
     moreText: `
 If you have any trouble contact UNEP-WCMC: mailto:iccaregistry@unep-wcmc.org
