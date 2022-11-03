@@ -17,7 +17,7 @@ const m = defineMessages({
     description: 'Accessibility label for next page button',
   },
   nextPageHint: {
-    id: 'introScreens.IntroDots.nextPageLabel',
+    id: 'introScreens.IntroDots.nextPageHint',
     defaultMessage: 'Navigate to the next page',
     description: 'Accessibility hint for next page button',
   },

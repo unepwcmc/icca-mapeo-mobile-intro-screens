@@ -286,8 +286,8 @@ const descriptions = {
   title: 'Title for the intro screen page',
   description: 'Main text for the intro screen page',
   moreLink: 'Text shown for link to more information',
-  moreTitle: 'Title shown for more information screen',
-  moreText: 'Text shown in more information screen',
+  moreTitle: 'Title shown for the more information screen',
+  moreText: 'Text shown in the more information screen',
 }
 
 const getIntlMessages = (
