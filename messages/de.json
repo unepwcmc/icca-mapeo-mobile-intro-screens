@@ -1,23 +1,23 @@
 {
     "introScreens.IntroDots.nextPageHint": {
-        "message": "Navigate to the next page",
+        "message": "Vorwärts zur nächsten Seite",
         "description": "Accessibility hint for next page button"
     },
     "introScreens.IntroDots.nextPageLabel": {
-        "message": "Continue",
+        "message": "Fortsetzen",
         "description": "Accessibility label for next page button"
     },
     "introScreens.IntroScreen0.title": {
         "description": "Title for the intro screen page",
-        "message": "Welcome to Mapeo for ICCAs"
+        "message": "Willkommen bei Mapeo für ICCAs"
     },
     "introScreens.IntroScreen0.description": {
         "description": "Main text for the intro screen page",
-        "message": "Mapeo for ICCAs was developed specifically to support the mapping of ICCA boundaries and includes the option of submitting the ICCA information to UNEP-WCMC."
+        "message": "Mapeo for ICCAs wurde speziell zur Unterstützung der Zuordnung von ICCA-Grenzen entwickelt und bietet die Möglichkeit, die ICCA-Informationen an UNEP-WCMC zu übermitteln."
     },
     "introScreens.IntroScreen0.moreLink": {
         "description": "Text shown for link to more information",
-        "message": "Who built Mapeo?"
+        "message": "Wer hat Mapeo gebaut?"
     },
     "introScreens.IntroScreen0.moreText": {
         "description": "Text shown in more information screen",
