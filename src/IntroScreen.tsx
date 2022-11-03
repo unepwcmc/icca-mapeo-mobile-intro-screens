@@ -1,5 +1,6 @@
 // @flow
 import * as React from 'react'
+import { defineMessages, FormattedMessage, useIntl } from 'react-intl'
 import {
   View,
   Text,
@@ -23,13 +24,16 @@ import {
 import getContrastRatio from 'get-contrast-ratio'
 import UniversalImage from './UniversalImage'
 
-interface ScreenBase {
-  backgroundColor: string
+interface ScreenTranslations {
   title: string
   description: string
   moreLink?: string
   moreText?: string
   moreTitle?: string
+}
+
+interface ScreenBase extends ScreenTranslations {
+  backgroundColor: string
 }
 
 interface ScreenWithAnimation extends ScreenBase {
@@ -276,6 +280,35 @@ const FadeUpView = ({
   )
 }
 
+const descriptions = {
+  title: 'Title for the intro screen page',
+  description: 'Main text for the intro screen page',
+  moreLink: 'Text shown for link to more information',
+  moreTitle: 'Title shown for the more information screen',
+  moreText: 'Text shown in the more information screen',
+}
+
+const getIntlMessages = (
+  screen: ScreenType,
+  index: Number
+): {
+  [index: string]: ScreenTranslations
+} => {
+  const messages = {}
+
+  Object.keys(descriptions).forEach(key => {
+    if (screen[key]) {
+      messages[key] = {
+        id: `introScreens.IntroScreen${index}.${key}`,
+        defaultMessage: screen[key],
+        description: descriptions[key],
+      }
+    }
+  })
+
+  return messages
+}
+
 const IntroScreen = ({
   position,
   screen,
@@ -289,6 +322,9 @@ const IntroScreen = ({
   index: number
   onShowInfo: OnShowInfo
 }) => {
+  const { formatMessage: t } = useIntl()
+  const m = defineMessages(getIntlMessages(screen, index))
+
   const show = useShowContent(position, index, {
     maxPosition: screenCount,
   })
@@ -313,7 +349,7 @@ const IntroScreen = ({
       <FadeUpView show={show} style={styles.textContainer}>
         {screen.title ? (
           <Text style={[styles.title, { color: textColor }]}>
-            {screen.title}
+            <FormattedMessage {...m.title} />
           </Text>
         ) : null}
         {screen.description ? (
@@ -321,7 +357,7 @@ const IntroScreen = ({
             style={[styles.description, { color: textColor }]}
             textBreakStrategy="balanced"
           >
-            {screen.description}
+            <FormattedMessage {...m.description} values={{ br: '\n' }} />
           </Text>
         ) : null}
         {typeof moreLink === 'string' && typeof moreText === 'string' ? (
@@ -329,13 +365,13 @@ const IntroScreen = ({
             style={styles.button}
             onPress={() => {
               onShowInfo({
-                title: screen.moreTitle || moreLink,
-                text: moreText,
+                title: t(m.moreTitle || m.moreLink),
+                text: t(m.moreText),
               })
             }}
           >
             <Text style={styles.buttonText} textBreakStrategy="balanced">
-              {screen.moreLink}
+              <FormattedMessage {...m.moreLink} />
             </Text>
           </Touchable>
         ) : (

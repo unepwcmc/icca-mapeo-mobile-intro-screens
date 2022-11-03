@@ -1,16 +1,25 @@
 import React from 'react'
+import { IntlShape, RawIntlProvider } from 'react-intl'
 import { StyleSheet, ScrollView } from 'react-native'
 import Markdown from './Markdown'
 
-const InfoScreen = ({ markdownText }: { markdownText: string }) => {
+const InfoScreen = ({
+  markdownText,
+  intl,
+}: {
+  markdownText: string
+  intl: IntlShape
+}) => {
   return (
-    <ScrollView
-      style={styles.root}
-      contentContainerStyle={styles.inner}
-      bounces
-    >
-      {Markdown(markdownText)}
-    </ScrollView>
+    <RawIntlProvider value={intl}>
+      <ScrollView
+        style={styles.root}
+        contentContainerStyle={styles.inner}
+        bounces
+      >
+        {Markdown(markdownText)}
+      </ScrollView>
+    </RawIntlProvider>
   )
 }
 

@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { defineMessages, useIntl } from 'react-intl'
 import { View, StyleSheet } from 'react-native'
 
 import Animated from 'react-native-reanimated'
@@ -8,6 +9,19 @@ import Octicons from 'react-native-vector-icons/Octicons'
 import { LinearGradient } from 'expo-linear-gradient'
 import { withTimingTransition, useValues } from 'react-native-redash'
 import { Route } from 'react-native-tab-view'
+
+const m = defineMessages({
+  nextPageLabel: {
+    id: 'introScreens.IntroDots.nextPageLabel',
+    defaultMessage: 'Continue',
+    description: 'Accessibility label for next page button',
+  },
+  nextPageHint: {
+    id: 'introScreens.IntroDots.nextPageHint',
+    defaultMessage: 'Navigate to the next page',
+    description: 'Accessibility hint for next page button',
+  },
+})
 
 const {
   interpolate,
@@ -39,6 +53,8 @@ const IntroDots = ({
   jumpTo: (index: number) => void
   onPressNext: () => void
 }) => {
+  const { formatMessage: t } = useIntl()
+
   const [isLast, isNotLast] = useValues([0, 0], [])
   const translateX = interpolate(position, {
     inputRange: [0, routes.length - 1],
@@ -91,8 +107,8 @@ const IntroDots = ({
         <TouchableOpacity
           onPress={onPressNext}
           style={styles.buttonContainer}
-          accessibilityLabel="Continue"
-          accessibilityHint="Navigate to the next page"
+          accessibilityLabel={t(m.nextPageLabel)}
+          accessibilityHint={t(m.nextPageHint)}
         >
           <View style={styles.buttonContainer}>
             <Animated.View style={[styles.nextButton, { opacity: isLast }]}>

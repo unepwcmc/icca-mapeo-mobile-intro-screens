@@ -1,4 +1,11 @@
+//TODO: see if this can be removed - currently needed to run on android via expo go
+//TODO: also remove from package.json if not needed
+import 'intl'
+import 'intl/locale-data/jsonp/en'
+import 'intl/locale-data/jsonp/de'
+
 import React from 'react'
+import { createIntl, createIntlCache } from 'react-intl'
 import {
   createStackNavigator,
   createAppContainer,
@@ -15,6 +22,20 @@ import { HeaderTitle } from 'react-navigation-stack'
 import { StatusBar } from 'react-native'
 import { useNavigationParam } from 'react-navigation-hooks'
 
+import messages from './translations/messages.json'
+
+const cache = createIntlCache()
+
+const locale = 'de'
+
+const intl = createIntl(
+  {
+    locale: locale,
+    messages: messages[locale],
+  },
+  cache
+)
+
 const InfoHeaderTitle = () => {
   const title = useNavigationParam('introInfoTitle')
   return <HeaderTitle>{title}</HeaderTitle>
@@ -26,7 +47,7 @@ const Info = ({ navigation }: NavigationScreenProps) => {
   return (
     <>
       <StatusBar hidden={false} />
-      <IntroInfo markdownText={text} />
+      <IntroInfo intl={intl} markdownText={text} />
     </>
   )
 }
@@ -56,6 +77,7 @@ const Intro = ({ navigation }: NavigationScreenProps) => {
     <>
       <StatusBar hidden />
       <IntroPager
+        intl={intl}
         onShowInfo={handleShowInfo}
         onPressComplete={handlePressComplete}
       />

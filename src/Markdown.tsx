@@ -172,11 +172,7 @@ const renderers = {
     ),
 
   text: (props: { children: any }) =>
-    $(
-      Text,
-      { ...textProps, style: styles.text },
-      props.children.split('\n').join(' ')
-    ),
+    $(Text, { ...textProps, style: styles.text }, props.children),
 
   heading: (props: { children: any; level: 1 | 2 | 3 | 4 | 5 | 6 }) =>
     $(
@@ -233,6 +229,9 @@ const renderers = {
     ),
 
   listItem: (props: { children: any; index: number; ordered: boolean }) => {
+    const list_index_key = `list_index_${props.index}`
+    const list_text_key = `list_text_${props.index}`
+
     return $(
       View,
       {
@@ -246,13 +245,20 @@ const renderers = {
         props.ordered
           ? $(
               Text,
-              { style: [styles.text, styles.orderedBullet], key: 0 },
+              {
+                style: [styles.text, styles.orderedBullet],
+                key: list_index_key,
+              },
               `${props.index + 1}.`
             )
-          : $(Text, null, '\u2022 '),
+          : $(Text, { key: list_index_key }, '\u2022 '),
         $(
           Text,
-          { ...textProps, style: styles.listItemText, key: 1 },
+          {
+            ...textProps,
+            style: styles.listItemText,
+            key: list_text_key,
+          },
           props.children
         ),
       ]

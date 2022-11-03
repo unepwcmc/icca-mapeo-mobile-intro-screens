@@ -24,6 +24,7 @@ For more information and case studies about how it is being used see: www.mapeo.
     moreLink: 'What is an ICCA?',
     moreText: `
 "Mapeo for ICCAs" is for indigenous peoples and local communities whose knowledge and practices result in the conservation of nature within an area or territory under their governance. Such territories and areas are often referred to as ‘ICCAs’.
+
 ICCAs have three key characteristics:
 
 1. An indigenous people or local community has a close and profound relationship with its territory or area.
