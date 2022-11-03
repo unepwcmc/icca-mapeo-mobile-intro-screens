@@ -334,13 +334,11 @@ const IntroScreen = ({
   const textColor =
     getContrastRatio(screen.backgroundColor, 'white') <= 3 ? 'black' : 'white'
 
-  const getImage = (screenWithImage: ScreenWithImage): ImageSourcePropType => {
-    if (screenWithImage.image[locale]) {
-      return screenWithImage.image[locale]
-    } else {
-      return screenWithImage.image.en
-    }
-  }
+  const getImage = (screenWithImage: ScreenWithImage): ImageSourcePropType =>
+    screenWithImage.image[locale]
+      ? screenWithImage.image[locale]
+      : screenWithImage.image.en
+
   let asset = null
   if ((screen as ScreenWithAnimation).animation) {
     // asset = (
