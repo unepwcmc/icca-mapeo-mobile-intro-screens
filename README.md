@@ -163,13 +163,15 @@ Text snippets are defined as messages, although with a description of the text a
 
 As this project is intended as a dependency and not a standalone app, as per [format.js recommendations](https://formatjs.io/docs/guides/distribute-libraries) the translations that are used for the intro-screens should be defined in the parent project. Here this is in `example/translations/messages.json`. Indeed, the parent project provides the `intl` object powering `react-intl`'s functionality.
 
-We use CrowdIn to provide translated strings. As per the `crowdin.yml` config, CrowdIn uses `messages/en.json` to extract the strings to be translated. Once these are translated in the [CrowdIn online interface](https://crowdin.com/project/mapeo-mobile-intro-screens), an automated PR is submitted with additional `messages/[iso_2].json` files. 
+We use CrowdIn to provide translated strings. As per the `crowdin.yml` config, CrowdIn uses `messages/en.json` to extract the strings to be translated. Once these are translated in the [CrowdIn online interface](https://crowdin.com/project/mapeo-mobile-intro-screens), an automated PR is submitted with additional `messages/[iso_2].json` files. This PR must be approved for the translations to be added to the project
 
 Note, these files will not automatically be available in the project. The translations must be added to the messages object in the parent project. To enable this, a `lang` key is added to the `package.json` file defining the path to the directory containing the translation files. The parent project can then walk through its packages extracting the translations and adding these to its messages object.
 
 ### Assets
 
 The intro screens also feature some screenshots of the app. All images in `assets/en` are added to CrowdIn for localisation. Localised assets are added to `assets/[iso_2]`.
+
+As react-native requires all images to be required statically and therefore not dynamically based on the current locale, in `screenDefs` all localised images must be explicitly required. Adding new images through CrowdIn will not automatically make them available in the project.
 
 ## Release and Publishing changes
 
