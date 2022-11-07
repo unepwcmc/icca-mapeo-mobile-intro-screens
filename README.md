@@ -167,6 +167,10 @@ We use CrowdIn to provide translated strings. As per the `crowdin.yml` config, C
 
 Note, these files will not automatically be available in the project. The translations must be added to the messages object in the parent project. To enable this, a `lang` key is added to the `package.json` file defining the path to the directory containing the translation files. The parent project can then walk through its packages extracting the translations and adding these to its messages object.
 
+### Assets
+
+The intro screens also feature some screenshots of the app. All images in `assets/en` are added to CrowdIn for localisation. Localised assets are added to `assets/[iso_2]`.
+
 ## Release and Publishing changes
 
 need to be logged in in your cli to the unep-wcmc npm account (credentials available to team members on LastPass)
