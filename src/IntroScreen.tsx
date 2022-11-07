@@ -41,7 +41,9 @@ interface ScreenWithAnimation extends ScreenBase {
 }
 
 interface ScreenWithImage extends ScreenBase {
-  image: ImageSourcePropType
+  image: {
+    [key: string]: ImageSourcePropType
+  }
 }
 
 export type ScreenType = ScreenBase | ScreenWithAnimation | ScreenWithImage
@@ -292,7 +294,7 @@ const getIntlMessages = (
   screen: ScreenType,
   index: Number
 ): {
-  [index: string]: ScreenTranslations
+  [key: string]: ScreenTranslations
 } => {
   const messages = {}
 
@@ -322,7 +324,7 @@ const IntroScreen = ({
   index: number
   onShowInfo: OnShowInfo
 }) => {
-  const { formatMessage: t } = useIntl()
+  const { formatMessage: t, locale } = useIntl()
   const m = defineMessages(getIntlMessages(screen, index))
 
   const show = useShowContent(position, index, {
@@ -332,13 +334,18 @@ const IntroScreen = ({
   const textColor =
     getContrastRatio(screen.backgroundColor, 'white') <= 3 ? 'black' : 'white'
 
+  const getImage = (screenWithImage: ScreenWithImage): ImageSourcePropType =>
+    screenWithImage.image[locale]
+      ? screenWithImage.image[locale]
+      : screenWithImage.image.en
+
   let asset = null
   if ((screen as ScreenWithAnimation).animation) {
     // asset = (
     //   <Animation show={show} source={screen.animation} style={styles.asset} />
     // )
   } else if ((screen as ScreenWithImage).image) {
-    asset = <UniversalImage source={(screen as ScreenWithImage).image} />
+    asset = <UniversalImage source={getImage(screen as ScreenWithImage)} />
   }
 
   const { moreLink, moreText } = screen
